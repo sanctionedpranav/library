@@ -1,0 +1,14 @@
+<label for="book_name">Title</label>
+<input type="text" name="title" id="book_name" value="<%= book.title %>">
+
+<label>Author</label>
+<select name="author">
+  <% authors.forEach(author=> {
+    <% if(author.id===book.author){ %>
+      <option selected label="<%= author.name %>" value="<%= author.id %>">
+    <% } else{ %>
+      <option label="<%= author.name %>" value="<%= author.id %>">
+    <% } %>
+  }); %>
+</select>
+<input type="text" name="author" value="<%= book.title %>">
